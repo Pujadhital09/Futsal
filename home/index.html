@@ -5,18 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
 </head>
 <body>
   <nav>
     <div class="logo">
+      <img src="./image/logo.png" alt="logo">
       <h2>Futsal Go</h2>
+
+
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="./about.html">About</a>
     </div>
   <div class="buttons">
-    <button>LogIn</button>
-    <button>SignUp</button>
+    <button id="loginBtn">LogIn</button>
+    <button id="signupBtn">SignUp</button>
   </div>
   </nav>
-    <div class="container">
+    <div id="home" class="container">
     <h2 style="margin-left: 480px;">Available Futsal Venues</h2>
     <div class="venues">
         <div class="section-1">
@@ -25,6 +35,7 @@
           <h3>Brothers Futsal</h3>
           <p>Location: ShivaChowk,Narayantar</p>
           <p>Capacity: 10 players</p>
+          <p><span>Price:</span> Rs 1000</p>
           <button>Book Now</button>
         </div>
         <div class="venue-card">
@@ -32,6 +43,7 @@
           <h3>Lumbini Futsal</h3>
           <p>Location: Chabhil</p>
           <p>Capacity: 12 players</p>
+          <p><span>Price:</span> Rs 1200</p>
           <button>Book Now</button>
         </div>
         <div class="venue-card">
@@ -39,6 +51,7 @@
           <h3>Birbhadra Futsal</h3>
           <p>Location: ShivaChowk,Narayantar</p>
           <p>Capacity: 8 players</p>
+          <p><span>Price:</span> Rs 9000</p>
           <button>Book Now</button>
         </div>
     </div>
@@ -48,6 +61,7 @@
           <h3>Arena Futsal</h3>
           <p>Location: Chabahil</p>
           <p>Capacity: 10 players</p>
+          <p><span>Price:</span> Rs 1000</p>
           <button>Book Now</button>
         </div>
         <div class="venue-card">
@@ -55,6 +69,7 @@
             <h3>Elite Futsal</h3>
             <p>Location: Kapan</p>
             <p>Capacity: 12 players</p>
+            <p><span>Price:</span> Rs 1200</p>
             <button>Book Now</button>
           </div>
         <div class="venue-card">
@@ -62,9 +77,166 @@
             <h3>Shree Futsal</h3>
             <p>Location: Chabahil</p>
             <p>Capacity: 10 players</p>
+            <p><span>Price:</span> Rs 1000</p>
             <button>Book Now</button>
         </div>
     </div>
 </div>
+
+<!-- Popup Modal for Login -->
+<div id="loginPopup" class="popup">
+  <div class="popup-content1">
+    <span class="close" id="loginClose">&times;</span>
+    <h2>Login</h2>
+    <form class="login-form">
+      <input type="email" id="loginEmail" placeholder="Enter your email" required>
+      <input type="password" id="loginPassword" placeholder="Enter your password" required>
+      <button type="submit" class="login-btn">Log In</button>
+    </form>
+    <p class="login-link">Don't have an account? <a href="#" id="goToSignup">Sign up</a></p>
+  </div>
+</div>
+
+<!-- Popup Modal for Signup -->
+<div id="signupPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" id="signupClose">&times;</span>
+    <h2>Sign Up</h2>
+    <form class="signup-form">
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="text" id="number" placeholder="Enter your phone number" required>
+      <input type="password" id="password" placeholder="Enter your password" required>
+      <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+      <button type="submit" class="signup-btn">Sign Up</button>
+
+      <p class="login-link">Already have an account? <a href="#" id="goToLogin">Sign in</a></p>
+      <div class="or">or</div>
+  
+  <div id="g_id_onload" class="google"
+      data-client_id="YOUR_GOOGLE_CLIENT_ID_HERE"
+      data-context="signup"
+      data-ux_mode="popup"
+      data-callback="handleCredentialResponse">
+  </div>
+  
+  <div class="g_id_signin"
+      data-type="standard"
+      data-shape="rectangular"
+      data-theme="outline"
+      data-text="signup_with"
+      data-size="large">
+  </div>
+  </form>
+  </div>
+</div>
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="about-container">
+    <h1>About <span>Futsal Go</span></h1>
+    <p>Futsal Go is your one-stop platform to easily book futsal venues around your city. 
+      Whether you’re a casual player or a team looking for a competitive space, 
+      we help you find and reserve the perfect court with just a few clicks!</p>
+    
+    <div class="about-cards">
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>To simplify futsal booking for everyone, making it faster, smarter, and more enjoyable.</p>
+      </div>
+      <div class="card">
+        <h3>Our Vision</h3>
+        <p>To be Nepal’s most trusted and loved futsal booking platform, connecting players with venues seamlessly.</p>
+      </div>
+      <div class="card">
+        <h3>Why Choose Us?</h3>
+        <p>Easy booking process, trusted venues, instant confirmation, and 24/7 customer support for any help you need!</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-home-btn">Back to Home</a>
+  </div>
+</section>
+
+
+
+</body>
+</html>
+
+
+<footer>
+  <div class="footer-content">
+    <h3>Futsal Go</h3>
+    <p>Book your futsal matches easily with Futsal Go. Quick, simple, and reliable!</p>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Futsal Go | Designed by DSP</p>
+  </div>
+</footer>
+
+<script>
+const loginBtn = document.getElementById('loginBtn');
+const signupBtn = document.getElementById('signupBtn');
+const loginPopup = document.getElementById('loginPopup');
+const signupPopup = document.getElementById('signupPopup');
+const loginClose = document.getElementById('loginClose');
+const signupClose = document.getElementById('signupClose');
+
+const goToSignup = document.getElementById('goToSignup');
+const goToLogin = document.getElementById('goToLogin');
+
+
+  // Open Login Popup
+loginBtn.onclick = () => {
+  loginPopup.style.display = 'flex';
+  signupPopup.style.display = 'none';
+};
+
+// Open Signup Popup
+signupBtn.onclick = () => {
+  signupPopup.style.display = 'flex';
+  loginPopup.style.display = 'none';
+};
+
+// Close popups
+loginClose.onclick = () => {
+  loginPopup.style.display = 'none';
+};
+
+signupClose.onclick = () => {
+  signupPopup.style.display = 'none';
+};
+
+  // Switch from Login to Signup
+  goToSignup.onclick = (e) => {
+  e.preventDefault();
+  loginPopup.style.display = 'none';
+  signupPopup.style.display = 'flex';
+    };
+
+// Switch from Signup to Login
+  goToLogin.onclick = (e) => {
+  e.preventDefault();
+  signupPopup.style.display = 'none';
+  loginPopup.style.display = 'flex';
+};
+
+  window.onclick = (event) => {
+    if (event.target === popup) {
+      popup.style.display = 'none';
+    }
+    if (event.target === loginPopup) {
+    loginPopup.style.display = 'none';
+  }
+  };
+
+  function handleCredentialResponse(response) {
+      console.log("ID Token: " + response.credential);
+      }
+        // You can now send this token to your server to verify and create an account
+
+      
+  </script>
 </body>
 </html>
